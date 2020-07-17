@@ -1,0 +1,5 @@
+type Rsvp @model {
+  id: ID!
+  firstName: String!
+  lastName: String!
+}
