@@ -10,6 +10,11 @@
             "StackName": "amplify-afterparty-dev-93337",
             "StackId": "arn:aws:cloudformation:us-east-1:909520030490:stack/amplify-afterparty-dev-93337/1f2d3d80-c832-11ea-8139-0ab6cdd0d422",
             "AmplifyAppId": "d1o0ulmg22fw93"
+        },
+        "categories": {
+            "auth": {
+                "afterparty9655f7fe": {}
+            }
         }
     }
 }

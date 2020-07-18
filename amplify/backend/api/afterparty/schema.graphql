@@ -1,4 +1,6 @@
-type Rsvp @model {
+type Rsvp
+  @model
+  @aws_api_key {
   id: ID!
   firstName: String!
   lastName: String!
