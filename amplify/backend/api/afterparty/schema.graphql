@@ -1,6 +1,7 @@
 type Rsvp
   @model
-  @aws_api_key {
+  @aws_api_key
+  @auth(rules: [{ allow: public, operations: [read, create] }]) {
   id: ID!
   firstName: String!
   lastName: String!
