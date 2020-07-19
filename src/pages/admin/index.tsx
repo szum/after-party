@@ -4,30 +4,46 @@ import * as queries from '../../graphql/queries';
 import * as subscriptions from '../../graphql/subscriptions';
 
 export default function AdminPage(props) {
-  const [rsvps, setRsvps] = useState(props.rsvps);
+  const [state, dispatch] = useReducer(reducer, props.rsvps);
 
   useEffect(() => {
     const subscription = API.graphql(graphqlOperation(subscriptions.onCreateRsvp)).subscribe({
       next: (rsvpData) => {
-        const newRsvp = (rsvpData.value.data.onCreateRsvp);
-        setRsvps([...rsvps, newRsvp]);
+        const newRsvp = rsvpData.value.data.onCreateRsvp;
+        dispatch({type: 'addRsvp', data: newRsvp});
       }
     });
-    // return () => {
-    //   subscription.unsubscribe();
-    // };
+    return () => {
+      subscription.unsubscribe();
+    };
   }, []);
+
+  const handleCheckIn = (e) => {
+    dispatch({type: 'toggleCheckIn', data: e.target.value });
+  }
+
+  const totalCheckIns = state.filter((rsvp) => rsvp.checkedIn ).length;
 
   return(
     <React.Fragment>
-      <div class="counter">Attendees: {rsvps.length}</div>
-      <div class="GuestList">
+      <div className="totalAttendees">Attendees: {state.length}</div>
+      <div className="totalCheckIns">Checked In: {totalCheckIns}</div>
+      <ul className="GuestList">
         {
-          rsvps.map((rsvp) => {
-            return (<div>{rsvp.firstName}, {rsvp.lastName}</div>);
+          state.map((rsvp, idx) => {
+            return (
+              <li key={idx}>
+                {rsvp.firstName}, {rsvp.lastName}
+                <input
+                  type="checkbox"
+                  value={rsvp.id}
+                  checked={rsvp.checkedIn}
+                  onChange={handleCheckIn} />
+              </li>
+            );
           })
         }
-      </div>
+      </ul>
     </React.Fragment>
   );
 }
@@ -45,3 +61,23 @@ export async function getStaticProps() {
     }
   }
 }
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'addRsvp':
+      return [...state, action.data];
+    case 'toggleCheckIn':
+      return state.map((rsvp, idx) => {
+        if (action.data !== rsvp.id) {
+          return rsvp;
+        }
+        return {
+          ...rsvp,
+          checkedIn: !rsvp.checkedIn
+        }
+      })
+    default:
+      throw new Error();
+  }
+}
+

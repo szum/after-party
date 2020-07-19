@@ -11,6 +11,7 @@ export const createRsvp = /* GraphQL */ `
       id
       firstName
       lastName
+      checkedIn
       createdAt
       updatedAt
     }
@@ -25,6 +26,7 @@ export const updateRsvp = /* GraphQL */ `
       id
       firstName
       lastName
+      checkedIn
       createdAt
       updatedAt
     }
@@ -39,6 +41,7 @@ export const deleteRsvp = /* GraphQL */ `
       id
       firstName
       lastName
+      checkedIn
       createdAt
       updatedAt
     }
