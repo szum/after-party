@@ -1,0 +1,25 @@
+.AdminHead {
+  max-width: 480px;
+}
+
+.AdminHead span {
+  float: right;
+}
+
+.TotalAttendees {
+  float: left;
+}
+.GuestList {
+  max-width: 480px;
+  padding: 0;
+}
+.GuestList li {
+  margin: 20px 0;
+}
+.GuestList input {
+  float: right;
+}
+.Totals {
+  max-width: 480px;
+  text-align: right;
+}
