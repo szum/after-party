@@ -9,8 +9,6 @@ export const getRsvp = /* GraphQL */ `
       firstName
       lastName
       checkedIn
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -26,8 +24,6 @@ export const listRsvps = /* GraphQL */ `
         firstName
         lastName
         checkedIn
-        createdAt
-        updatedAt
       }
       nextToken
     }

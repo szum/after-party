@@ -27,8 +27,6 @@ export const updateRsvp = /* GraphQL */ `
       firstName
       lastName
       checkedIn
-      createdAt
-      updatedAt
     }
   }
 `;

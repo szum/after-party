@@ -1,9 +1,12 @@
+import React from 'react';
 import Amplify from 'aws-amplify';
 import awsmobile from '../aws-exports';
+import { AppProps } from 'next/app';
+import './styles.css';
 
 Amplify.configure(awsmobile);
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps): React.Element<typeof Component> {
   return <Component {...pageProps} />
 }
 
