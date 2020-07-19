@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { API, graphqlOperation } from 'aws-amplify';
 import * as mutations from '../graphql/mutations';
 import StaticMap from '../components/static-map';
@@ -15,6 +15,7 @@ export default function RsvpPage() {
   const [lastName, setLastName] = useState('');
   const [address, setAddress] = useState('');
 
+  // useEffect here
   fetchAddress(lat,long).then((addr) => setAddress(addr));
 
   const handleSubmit = (e) => {
