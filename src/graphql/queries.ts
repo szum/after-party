@@ -8,6 +8,7 @@ export const getRsvp = /* GraphQL */ `
       id
       firstName
       lastName
+      checkedIn
       createdAt
       updatedAt
     }
@@ -24,6 +25,7 @@ export const listRsvps = /* GraphQL */ `
         id
         firstName
         lastName
+        checkedIn
         createdAt
         updatedAt
       }

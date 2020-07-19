@@ -5,4 +5,5 @@ type Rsvp
   id: ID!
   firstName: String!
   lastName: String!
+  checkedIn: Boolean
 }
