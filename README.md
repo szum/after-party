@@ -1,9 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Where is the after-party?
 
-## Available Scripts
+Start an after-party with longitude & latitude coordinates and then share the link. Users can RSVP, see where the location is with street view provided by Google Maps, and request an Uber to get there. An admin panel let's you see the guestlist + check in attendees in real time with GraphQL subscriptions.
 
-In the project directory, you can run:
+A serverless app hosted on AWS Amplify with server side and static rendering in the front-end via Next.js
 
+
+---------
 ### `yarn start`
 
 Runs the app in the development mode.<br />
