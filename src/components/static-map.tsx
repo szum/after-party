@@ -9,7 +9,7 @@ type Props = {
 }
 
 export default function StaticMap(props: Props): React.Element<typeof Component> {
-  const mapParams = `center=${props.lat},${props.long}&zoom=15&size=${props.size}&markers=color:red%7C${props.lat},${props.long}&key=${process.env.staticMapsApiKey}`;
+  const mapParams = `center=${props.lat},${props.long}&zoom=15&size=${props.size}&markers=color:red%7C${props.lat},${props.long}&key=${process.env.NEXT_PUBLIC_GMAPS_API_KEY}`;
   return(
     <img src={`${STATIC_API_URL}${mapParams}`} />
   );

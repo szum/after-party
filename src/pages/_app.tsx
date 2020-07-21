@@ -1,5 +1,6 @@
 import React from 'react';
 import Amplify from 'aws-amplify';
+import dotenv from 'dotenv';
 import awsmobile from '../aws-exports';
 import { AppProps } from 'next/app';
 import './styles.css';
