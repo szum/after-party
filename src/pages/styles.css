@@ -2,18 +2,10 @@ html * {
   font-family: Arial;
 }
 
-.Location {
-  float: left;
-  max-width: 400px;
+body {
+  margin: 0;
 }
 
-form {
-  display: inline-block;
-}
-
-h1 {
-  margin: 18px 0;
-}
 h3 {
   margin: 0;
 }
@@ -25,10 +17,15 @@ input[type=text] {
 input[type=checkbox] {
   transform: scale(1.3);
 }
+
 li {
   margin: 6px 0;
 }
 
 p {
   margin: 2px 0;
+}
+
+.RsvpPage {
+  max-width: 480px;
 }

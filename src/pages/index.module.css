@@ -1,0 +1,20 @@
+.Location {
+  float: left;
+  max-width: 480px;
+}
+
+.StepsForm {
+  display: inline-block;
+}
+
+
+.Where {
+  margin: 18px 8px;
+}
+
+
+@media (max-width:480px) {
+  .Where {
+    text-align: center;
+  } 
+}

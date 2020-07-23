@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 .AdminHead {
   max-width: 480px;
+=======
+.AdminPage {
+	margin: 8px;
+}
+
+.AdminHead {
+  max-width: 480px;
+  margin: 0;
+>>>>>>> 0cf42e3762c22300d91ef3c7ac0915eba5c56267
 }
 
 .AdminHead span {
@@ -9,16 +19,32 @@
 .TotalAttendees {
   float: left;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0cf42e3762c22300d91ef3c7ac0915eba5c56267
 .GuestList {
   max-width: 480px;
   padding: 0;
 }
+<<<<<<< HEAD
 .GuestList li {
   margin: 20px 0;
 }
 .GuestList input {
   float: right;
 }
+=======
+
+.GuestList li {
+  margin: 20px 0;
+}
+
+.GuestList input {
+  float: right;
+}
+
+>>>>>>> 0cf42e3762c22300d91ef3c7ac0915eba5c56267
 .Totals {
   max-width: 480px;
   text-align: right;

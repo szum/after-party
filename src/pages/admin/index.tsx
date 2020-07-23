@@ -43,7 +43,7 @@ export default function AdminPage(props: Props): React.ReactNode {
   const totalCheckIns = state.filter((rsvp) => rsvp.checkedIn ).length;
 
   return(
-    <React.Fragment>
+    <div className={styles.AdminPage}>
       <h1 className={styles.AdminHead}>
         After-party <Emoji label="devil" symbol="😈"/>
       </h1>
@@ -67,7 +67,7 @@ export default function AdminPage(props: Props): React.ReactNode {
           })
         }
       </ul>
-    </React.Fragment>
+    </div>
   );
 }
 
