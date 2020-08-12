@@ -75,7 +75,7 @@ export default function RsvpPage(): React.Element<typeof Component> {
              </li>
              <li><Emoji label="person-walking" symbol="🚶"/>, <Emoji label="bicycle" symbol="🚲"/>, or <a href={getUber(lat, long, address)}>request an Uber</a></li>
              <li>
-               Be mindful of the neighbours when you're walking in.
+               Be mindful of the neighbours when you`&quot;`re walking in.
               </li>
               <p>See you on the dancefloor <Emoji label="man-dancing" symbol="🕺"/></p>
           </ol>

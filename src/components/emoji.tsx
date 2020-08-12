@@ -1,3 +1,5 @@
+import React from 'react';
+
 type Props = {
   label: string;
   symbol: string;
@@ -14,5 +16,4 @@ export default function Emoji(props: Props): React.Element<typeof Component> {
       {props.symbol}
     </span>
   );
-
-};
+}
